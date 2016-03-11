@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('admin/', ['middleware' => 'auth', function () {
+    //
+}]);
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -25,7 +29,9 @@ Route::get('/', function () {
 | kernel and includes session state, CSRF protection, and more.
 |
 */
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
 
-Route::group(['middleware' => ['web']], function () {
-    //
+    Route::get('/home', 'HomeController@index');
+    Route::get('/list', 'HomeController@list_user');
 });
