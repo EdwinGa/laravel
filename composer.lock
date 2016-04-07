@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4a6eab0d133412176a1a44f779e422d9",
-    "content-hash": "2c454a36d8d84f200989f1ab695acebd",
+    "hash": "414c6305d90df14e115cdee7292d86f1",
+    "content-hash": "cbd6671ced806cb4f15d11de9affd094",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1780,16 +1780,16 @@
         },
         {
             "name": "zizaco/entrust",
-            "version": "dev-master",
+            "version": "5.2.x-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Zizaco/entrust.git",
-                "reference": "6a0fd8c3b73037b4855c6c4eaf1060788c0df1e9"
+                "reference": "b749bff868026336dec1ba1a16c150728697353d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Zizaco/entrust/zipball/6a0fd8c3b73037b4855c6c4eaf1060788c0df1e9",
-                "reference": "6a0fd8c3b73037b4855c6c4eaf1060788c0df1e9",
+                "url": "https://api.github.com/repos/Zizaco/entrust/zipball/b749bff868026336dec1ba1a16c150728697353d",
+                "reference": "b749bff868026336dec1ba1a16c150728697353d",
                 "shasum": ""
             },
             "require": {
@@ -1844,7 +1844,7 @@
                 "permission",
                 "roles"
             ],
-            "time": "2016-03-23 16:22:34"
+            "time": "2016-03-24 15:24:42"
         }
     ],
     "packages-dev": [

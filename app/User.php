@@ -3,16 +3,11 @@
 namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Auth\UserTrait;
-use Illuminate\Auth\UserInterface;
-use Illuminate\Auth\Reminders\RemindableTrait;
-use Illuminate\Auth\Reminders\RemindableInterface;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
 
-class User extends Authenticatable  
+class User extends Authenticatable
 {
-use EntrustUserTrait;
-
+    use EntrustUserTrait;
     /**
      * The attributes that are mass assignable.
      *
@@ -30,5 +25,4 @@ use EntrustUserTrait;
     protected $hidden = [
         'password', 'remember_token',
     ];
-
 }
