@@ -7,13 +7,12 @@ use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
-use Zizaco\Entrust\HasRole;
 use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 class User extends Authenticatable  
 {
 use EntrustUserTrait;
-use HasRole;
+
     /**
      * The attributes that are mass assignable.
      *
