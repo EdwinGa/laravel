@@ -18,6 +18,9 @@
     },
     "autoload": {
         "classmap": [
+            "Permission",
+            "Role",
+            "User",
             "database"
         ],
         "psr-4": {
