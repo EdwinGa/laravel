@@ -26,32 +26,3 @@ Route::get('/', function () {
     
 $user = Auth::user();
  
- if ($user->hasRole('admin'))
- {
- return "role admin!";
- }
-Route::filter('create_user', function()
- {
- $user = Auth::user();
- 
- if (!$user->ability(['admin'], ['create_user']))
- {
- return "creation user!";
- }
- });
-Route::get('/create_user', ['before' => ['create_user'], function()
- {
- return "puedes crear!";
- }]);
- 
- Route::filter('create_user2', function()
- {
- if (!Entrust::can('create_user') )
- {
- return "creer2";
- }
- });
-Route::get('/create_user', ['before' => ['create_user2'], function()
- {
- return "creer!";
- }]);
