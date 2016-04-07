@@ -17,12 +17,3 @@ use App\User;
 Route::get('/', function () {
     return view('welcome');
 });
-
-
- 
-    $admin = Role::find(1);
-    $user = User::find(1);
-    $user->attachRole($admin);
-    
-$user = Auth::user();
- 
