@@ -9,7 +9,7 @@ use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
 use Zizaco\Entrust\HasRole;
 
-class User extends Eloquent implements UserInterface, RemindableInterface 
+class User extends Authenticatable implements UserInterface, RemindableInterface 
 {
 
 use HasRole;
