@@ -18,15 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-$create_user = new Permission();
-    $create_user->name = 'create_user';
-    $create_user->display_name = 'crear usuarios';
-    $create_user->save();
+
  
-    $admin = new Role();
-    $admin->name = 'admin';
-    $admin->save();
-    $admin->attachPermission($create_user);
+    $admin = Role::find(1);
     $user = User::find(1);
     $user->attachRole($admin);
     
