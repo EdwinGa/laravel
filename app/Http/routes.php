@@ -1,8 +1,6 @@
 <?php
 
-use App/Permission;
-use App/Role;
-use App/User;
+use App;
 /*
 |--------------------------------------------------------------------------
 | Application Routes
