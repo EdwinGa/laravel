@@ -6,6 +6,7 @@ use Auth;
 use App\User;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use View;
 
 class HomeController extends Controller
 {
