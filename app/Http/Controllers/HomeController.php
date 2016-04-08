@@ -29,8 +29,8 @@ class HomeController extends Controller
     {
         $user = Auth::user();
         if ($user->hasRole('admin')) {
-            return view('admin.home');
+            return view('admin_home');
         }
-        return view('player.home');
+        return view('player_home');
     }
 }
