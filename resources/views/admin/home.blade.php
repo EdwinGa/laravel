@@ -9,6 +9,18 @@
 
                 <div class="panel-body">
                     You are logged in! Admin
+                    <table class="table table-striped">
+    <tr>
+        <th>Full name</th>
+        <th>Email</th>
+    </tr>
+    @foreach ($users as $user)
+    <tr>
+        <td>{{ $user->full_name }}</td>
+        <td>{{ $user->email }}</td>
+    </tr>
+    @endforeach
+  </table>
                 </div>
             </div>
         </div>

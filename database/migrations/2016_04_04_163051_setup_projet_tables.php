@@ -36,6 +36,8 @@ Schema::create('Cheval', function(Blueprint $table) {
             $table->integer('experience')->length(10);
             $table->integer('niveau')->length(10);
             $table->integer('etat_genral')->length(10);
+            $table->integer('id_joueur')->unsigned();
+            $table->foreign('id_joueur')->references('id_joueur')->on('Joueur');
         });
 
 Schema::create('Joueur', function(Blueprint $table) {
@@ -143,16 +145,19 @@ Schema::create('Article_journal', function(Blueprint $table) {
         });
 
 Schema::create('Blessure', function(Blueprint $table) {
+            $table->engine = 'MYISAM';
             $table->increments('id_blessure');
             $table->string('nom_blessure',50);
         });
 
 Schema::create('Parasite', function(Blueprint $table) {
+            $table->engine = 'MYISAM';
             $table->increments('id_parasite');
             $table->string('nom_parasite',50);
         });
 
 Schema::create('Maladie', function(Blueprint $table) {
+            $table->engine = 'MYISAM';
             $table->increments('id_maladie');
             $table->string('nom_maladie',50);
         });
@@ -233,15 +238,6 @@ Schema::create('Liste_joueur_tache', function(Blueprint $table) {
             $table->foreign('id_joueur')->references('id_joueur')->on('Joueur');
             $table->integer('id_tache')->unsigned();
             $table->foreign('id_tache')->references('id_tache')->on('Tache_auto');
-
-        });
-
-Schema::create('Liste_joueur_cheval', function(Blueprint $table) {
-            $table->increments('id_lst_joueur_cheval');
-            $table->integer('id_joueur')->unsigned();
-            $table->foreign('id_joueur')->references('id_joueur')->on('Joueur');
-            $table->integer('id_cheval')->unsigned();
-            $table->foreign('id_cheval')->references('id_cheval')->on('Cheval');
 
         });
 
