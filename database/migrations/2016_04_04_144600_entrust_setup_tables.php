@@ -1,6 +1,8 @@
 <?php
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use App\Role;
+use App\User;
 
 class EntrustSetupTables extends Migration
 {
@@ -54,6 +56,21 @@ class EntrustSetupTables extends Migration
 
             $table->primary(['permission_id', 'role_id']);
         });
+
+        // Create admin user
+        $admin = new Role();
+        $admin->name         = 'admin';
+        $admin->display_name = 'User Administrator'; 
+        $admin->description  = 'User is allowed to manage and edit other users'; 
+        $admin->save();
+
+        $user = new User();
+        $user->name         = 'Admin';
+        $user->email = 'admin@example.com'; 
+        $user->password  = bcrypt('secret'); 
+        $user->save();
+
+        $user->attachRole($admin);
     }
 
     /**
