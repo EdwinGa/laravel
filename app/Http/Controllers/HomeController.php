@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use App\User;
+use App\Cheval;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
@@ -27,7 +28,7 @@ class HomeController extends Controller
     public function index()
     {
         $user = Auth::user();
-        $users = User::all();
+        $users = Cheval::all();
         if ($user->hasRole('admin')) {
             return view('admin.home')->with('users', $users);
         }
