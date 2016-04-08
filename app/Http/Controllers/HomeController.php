@@ -6,7 +6,7 @@ use Auth;
 use App\User;
 use App\Http\Requests;
 use Illuminate\Http\Request;
-use Illuminate\View\Factory;
+use Illuminate\View\View;
 
 class HomeController extends Controller
 {
