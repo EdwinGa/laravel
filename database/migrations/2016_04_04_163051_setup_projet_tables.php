@@ -95,20 +95,20 @@ Schema::create('Infrastructure', function(Blueprint $table) {
 
         });
 
+Schema::create('Club', function(Blueprint $table) {
+            $table->increments('id_club');
+            $table->integer('capacite')->length(10);
+            $table->integer('id_gerant')->unsigned();
+            $table->foreign('id_gerant')->references('id_gerant')->on('Gerant');
+
+        });
+
 Schema::create('Concour', function(Blueprint $table) {
             $table->increments('id_concour');
             $table->integer('id_club')->unsigned();
             $table->foreign('id_club')->references('id_club')->on('Club');
             $table->date('date_debut');
             $table->date('date_fin');
-
-        });
-
-Schema::create('Club', function(Blueprint $table) {
-            $table->increments('id_club');
-            $table->integer('capacite')->length(10);
-            $table->integer('id_gerant')->unsigned();
-            $table->foreign('id_gerant')->references('id_gerant')->on('Gerant');
 
         });
 
