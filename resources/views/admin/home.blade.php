@@ -16,8 +16,8 @@
     </tr>
     @foreach ($users as $user)
     <tr>
-        <td>{{ $user->name }}</td>
-        <td>{{ $user->email }}</td>
+        <td>{{ $user->nom }}</td>
+        <td>{{ $user->id_chevals }}</td>
     </tr>
     @endforeach
   </table>
